@@ -33,7 +33,7 @@ const Main = () => {
             <button className="border border-gray-200 py-2 px-5 ml-4">Watch Later</button>
           </div>
           <p className="text-gray-400 text-md mb-4">{year}</p>
-          <p className="w-full md:max-w-[70%] lg:max-w-[50%] text-gray-300">Summary: {shortenSummary(movie?.overview, 150)}</p>
+          <p className="w-full md:max-w-[70%] lg:max-w-[50%] text-gray-300">{shortenSummary(movie?.overview, 150)}</p>
         </div>
       </div>
     
