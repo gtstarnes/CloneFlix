@@ -1,8 +1,10 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 const Row = ({title, fetchURL}) => {
-    const [movies, setMovies] = useState<Array<T>>([])
+    const [movies, setMovies] = useState<Array<T>>([]);
+    const [favorite, setFavorite] = useState(false);
 
     useEffect(() => {
         fetch(fetchURL)
@@ -23,8 +25,10 @@ const Row = ({title, fetchURL}) => {
                                 <img className="w-full h-auto block" src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie?.title} />
                                 <div className="absolute top-0 left-0 w-full h-full hover:bg-black/60 opacity-0 hover:opacity-100">
                                     <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">{movie?.title}</p>
+                                    <p>
+                                        {favorite ? <FaHeart className="absolute top-4 right-4 text-gray-300" /> : <FaRegHeart className="absolute top-4 right-4 text-gray-300" />}
+                                    </p>
                                 </div>
-
                             </div>
                 })}
             </div>
