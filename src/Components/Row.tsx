@@ -11,6 +11,7 @@ const Row = ({title, fetchURL}) => {
         .then(response => response.json())
         .then(response => setMovies(response.results))
         .catch(err => console.error(err));
+        console.log(movies)
     }, [fetchURL])
 
 
@@ -21,7 +22,7 @@ const Row = ({title, fetchURL}) => {
         <div className="relative flex items-center">
             <div id={'slider'}>
                 {movies.map((movie) => {
-                    return <Movie movie={movie}  />})}
+                    return <Movie key={movie.id} movie={movie}  />})}
             </div>
         </div>
     </div>
