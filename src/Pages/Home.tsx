@@ -10,7 +10,7 @@ const Home = () => {
       <Row title="Coming Soon" fetchURL={requests.requestUpcoming} />
       <Row title="Popular on CloneFlix" fetchURL={requests.requestPopular} />
       <Row title="Critically Acclaimed Movies" fetchURL={requests.requestTopRated} />
-      <Row title="Popular TV Shows" fetchURL={requests.requestTv} />
+      <Row title="Trending TV Shows" fetchURL={requests.requestTv} />
       <Row title="Coming Soon" fetchURL={requests.requestUpcoming} />
     </>
 
