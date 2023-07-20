@@ -19,9 +19,13 @@ const Row = ({title, fetchURL}) => {
         <div className="relative flex items-center">
             <div id={'slider'}>
                 {movies.map((movie) => {
-                    return <div className="w-[200px] sm:w-[260px] md:w-[320px] lg:w-[400px] inline-block cursor-pointer p-4">
-                        <img className="" src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie?.title} />
-                    </div>
+                    return <div className="w-[200px] sm:w-[280px] md:w-[360px] lg:w-[440px] inline-block cursor-pointer relative p-2">
+                                <img className="w-full h-auto block" src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie?.title} />
+                                <div className="absolute top-0 left-0 w-full h-full hover:bg-black/60 opacity-0 hover:opacity-100">
+                                    <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">{movie?.title}</p>
+                                </div>
+
+                            </div>
                 })}
             </div>
         </div>
