@@ -17,7 +17,7 @@ const Home = () => {
       <Row rowID="7" title="Crime and Punishment" fetchURL={requests.requestCrime} />
       <Row rowID="8" title="Dramas" fetchURL={requests.requestDrama} />
       <TeleRow rowID="9" title="TOP RATED TV SHOWS" fetchURL={requests.requestTv} />
-      
+      <Row rowID="10" title="TOP RATED TV SHOWS" fetchURL={requests.requestTv} />
     </>
 
   )
