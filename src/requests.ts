@@ -9,6 +9,7 @@ const requests= {
     requestCrime: "https://api.themoviedb.org/3/discover/movie?api_key=8afd6839e8a778ced0dc0b6500cd3adb&with_genres=80",
     requestAnimation: "https://api.themoviedb.org/3/discover/movie?api_key=8afd6839e8a778ced0dc0b6500cd3adb&with_genres=16",
     requestDrama: "https://api.themoviedb.org/3/discover/movie?api_key=8afd6839e8a778ced0dc0b6500cd3adb&with_genres=18",
+    requestPopularTV: `https://api.themoviedb.org/3/tv/popular?api_key=${api_key}`,
     requestTv: `https://api.themoviedb.org/3/tv/top_rated?api_key=${api_key}`,
 }
 
