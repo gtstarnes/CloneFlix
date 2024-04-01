@@ -9,8 +9,15 @@ type Row = {
     rowID: string
 }
 
+type Movie = {
+    backdrop_path: string,
+    id: number,
+    title?: string,
+    name?: string
+}
+
 const Row = ({title, fetchURL, rowID}: Row) => {
-    const [movies, setMovies] = useState<Array<T>>([]);
+    const [movies, setMovies] = useState<Array<Movie>>([]);
 
     useEffect(() => {
         fetch(fetchURL)
@@ -20,7 +27,7 @@ const Row = ({title, fetchURL, rowID}: Row) => {
     }, [fetchURL])
 
     const slideLeft = () => {
-        const slider = document.getElementById('slider' + rowID);
+        const slider: HTMLElement | null = document.getElementById('slider' + rowID);
         slider.scrollLeft = slider.scrollLeft - 500;
     };
 
