@@ -3,7 +3,13 @@ import { useState, useEffect } from 'react';
 import Movie from './Movie';
 import {MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
-const Row = ({title, fetchURL, rowID}) => {
+type Row = {
+    title: string,
+    fetchURL: string,
+    rowID: string
+}
+
+const Row = ({title, fetchURL, rowID}: Row) => {
     const [movies, setMovies] = useState<Array<T>>([]);
 
     useEffect(() => {
