@@ -2,6 +2,7 @@ import React from 'react'
 import Main from '../Components/Main';
 import Row from '../Components/Row';
 import requests from '../requests';
+import TeleRow from '../Components/TeleRow'
 
 const Home = () => {
   return (
@@ -15,6 +16,8 @@ const Home = () => {
       <Row rowID="6" title="Hilarious and Light-Hearted" fetchURL={requests.requestComedy} />
       <Row rowID="7" title="Crime and Punishment" fetchURL={requests.requestCrime} />
       <Row rowID="8" title="Dramas" fetchURL={requests.requestDrama} />
+      <TeleRow rowID="9" title="TOP RATED TV SHOWS" fetchURL={requests.requestTv} />
+      
     </>
 
   )
