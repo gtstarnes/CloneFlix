@@ -8,8 +8,8 @@ const Heart = () => {
     }
   return (
     <div>
-    {favorite ? <FaHeart className="absolute top-4 right-4 sm:top-3 sm:right-3 scale-125 md:scale-150 text-gray-300" onClick={changeFavorite} /> : 
-    <FaRegHeart className="absolute top-2 right-2 sm:top-3 sm:right-3 text-gray-300 scale-125 md:scale-150" onClick={changeFavorite} />}
+    {favorite ? <FaHeart className="absolute top-4 right-4 sm:right-3 scale-125 md:scale-150 text-gray-300" onClick={changeFavorite} /> : 
+    <FaRegHeart className="absolute top-4 right-2 sm:right-3 text-gray-300 scale-125 md:scale-150" onClick={changeFavorite} />}
     </div>
   )
 }
