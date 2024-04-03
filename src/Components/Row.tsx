@@ -9,7 +9,7 @@ type Row = {
     rowID: string
 }
 
-type Movie = {
+type MovieType = {
     backdrop_path: string,
     id: number,
     title?: string,
@@ -17,7 +17,7 @@ type Movie = {
 }
 
 const Row = ({title, fetchURL, rowID}: Row) => {
-    const [movies, setMovies] = useState<Array<Movie>>([]);
+    const [movies, setMovies] = useState<MovieType[]>([]);
 
     useEffect(() => {
         fetch(fetchURL)
